@@ -11,10 +11,11 @@
   "author": "Noroff",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.2",
-    "sass": "^1.54.8"
+    "live-server": "^1.1.0",
+    "prettier": "latest",
+    "sass": "latest"
   },
   "dependencies": {
-    "bootstrap-dark-5": "^1.1.3"
+    "bootstrap-dark-5": "latest"
   }
 }
