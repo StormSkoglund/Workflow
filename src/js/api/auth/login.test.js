@@ -36,4 +36,16 @@ describe("login", () => {
       JSON.stringify(profile),
     );
   });
+
+  it("throws an error if the login-information is incorrect", async () => {
+    fetch.mockResolvedValueOnce({
+      ok: false,
+      statusText: "Login failed",
+    });
+
+    const email = "example@notnoroff.no";
+    const password = "invalidPassword";
+
+    await expect(login(email, password)).rejects.toThrow("Login failed");
+  });
 });
