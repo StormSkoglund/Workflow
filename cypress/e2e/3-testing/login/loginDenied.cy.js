@@ -14,7 +14,7 @@ describe("LoginDenied", () => {
 
     cy.get("#loginPassword").type("lowercase", { log: false });
 
-    cy.get("#loginModal .btn-outline-success").should("be.visible").click();
+    cy.get("#loginForm button").contains("Login").click();
     cy.wait(500);
     cy.on("window:alert", (alert) => {
       expect(alert).to.contain(

@@ -1,5 +1,10 @@
-describe("Login", () => {
-  it("will log-in user, if the correct credentials are used", () => {
+describe("Login", function () {
+  before(function () {
+    cy.fixture("example").then(function (data) {
+      this.data = data;
+    });
+  });
+  it("will log-in user, if the correct credentials are used", function () {
     cy.visit("https://stormskoglund.github.io/Workflow/");
     cy.wait(1000);
 
@@ -10,17 +15,13 @@ describe("Login", () => {
     cy.wait(1000);
 
     cy.get("#loginForm").should("exist").should("be.visible");
-    cy.get("#loginEmail").type("test@noroff.no");
-    cy.wait(200);
-    cy.get("#loginPassword").type("Password", { log: false });
-    cy.wait(200);
-    cy.get("#loginModal .btn-outline-success").should("be.visible").click();
-    cy.wait(1000);
-    cy.location().then((location) => {
-      cy.wrap(location.href).should(
-        "contain",
-        "https://stormskoglund.github.io/Workflow/",
-      );
-    });
+    cy.get("#loginEmail").type(this.data.email);
+
+    cy.get("#loginPassword").type(this.data.password, { log: false });
+
+    cy.get("#loginForm button").contains("Login").click();
+    cy.wait(500);
+
+    cy.get('a[data-visible="loggedIn"]').should("exist");
   });
 });
