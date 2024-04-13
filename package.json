@@ -36,7 +36,8 @@
     "sass": "latest"
   },
   "dependencies": {
-    "bootstrap-dark-5": "latest"
+    "bootstrap-dark-5": "latest",
+    "dotenv": "^16.4.5"
   },
   "lint-staged": {
     "*.js": [
