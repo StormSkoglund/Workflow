@@ -1,7 +1,7 @@
 describe("LoginDenied", () => {
   it("denies user access, if the wrong credentials are used", () => {
-    cy.visit("https://stormskoglund.github.io/Workflow/");
-    cy.wait(500);
+    cy.visit("/");
+    cy.wait(2500);
 
     cy.get("#registerForm button")
       .contains("login", { matchCase: false })

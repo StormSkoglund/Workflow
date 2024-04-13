@@ -5,8 +5,8 @@ describe("logout", function () {
     });
   });
   it("will log-in user, if the correct credentials are used and then log out the user, when the logout button has been pressed", function () {
-    cy.visit("https://stormskoglund.github.io/Workflow/");
-    cy.wait(1000);
+    cy.visit("/");
+    cy.wait(2500);
 
     cy.get("#registerForm button")
       .contains("login", { matchCase: false })
