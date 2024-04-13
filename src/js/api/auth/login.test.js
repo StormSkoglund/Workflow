@@ -36,4 +36,15 @@ describe("login", () => {
       JSON.stringify(profile),
     );
   });
+  it("alerts the user if the login-information is incorrect", async () => {
+    fetch.mockResolvedValueOnce({
+      ok: false,
+      statusText: "Login failed",
+    });
+
+    const email = "badtest@noroff.com";
+    const password = "lowercase";
+
+    await expect(login(email, password)).rejects.toThrow("Login failed");
+  });
 });
