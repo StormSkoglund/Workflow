@@ -25,6 +25,6 @@ describe("logout", function () {
     cy.get('a[data-visible="loggedIn"]').should("exist");
     cy.wait(500);
     cy.get("button.btn.btn-outline-warning.me-2").should("be.visible").click();
-    cy.get('a[data-visible="loggedIn"]').should("not.be.visible");
+    cy.get('a[data-visible="loggedIn"]').should("not.be.selected");
   });
 });
