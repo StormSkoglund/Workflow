@@ -37,6 +37,13 @@ npm start
 To run Jest and Cypress tests, use the following command:
 
 npm run test
+## Testing Files
+
+The files including both unit-tests and e2e-tests can be found on the following paths:
+
+e2e-tests: cypress\e2e\3-testing\login\
+
+unit-tests: src\js\api\auth\
 
 ## Test Badges
 [![Automated Unit Testing](https://github.com/StormSkoglund/Workflow/actions/workflows/unit-test.yml/badge.svg)](https://github.com/StormSkoglund/Workflow/actions/workflows/unit-test.yml)
