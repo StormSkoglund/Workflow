@@ -4,6 +4,10 @@ This manual provides insights into the setup and workflow procedures for the Soc
 
 The objective of this course is to apply the acquired skills and knowledge to enhance the quality of a software package by implementing effective workflows and conducting thorough testing.
 
+## Github Pages
+
+https://stormskoglund.github.io/Workflow/
+
 ## Local Setup
 
 ### Prerequisites
