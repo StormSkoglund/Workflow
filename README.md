@@ -48,6 +48,7 @@ unit-tests: src\js\api\auth\
 ## Test Badges
 [![Automated Unit Testing](https://github.com/StormSkoglund/Workflow/actions/workflows/unit-test.yml/badge.svg)](https://github.com/StormSkoglund/Workflow/actions/workflows/unit-test.yml)
 [![Automated E2E Testing](https://github.com/StormSkoglund/Workflow/actions/workflows/e2e-test.yml/badge.svg)](https://github.com/StormSkoglund/Workflow/actions/workflows/e2e-test.yml)
+[![Deploy static content to Pages](https://github.com/StormSkoglund/Workflow/actions/workflows/pages.yml/badge.svg?branch=Workflow)](https://github.com/StormSkoglund/Workflow/actions/workflows/pages.yml)
 
 ## About me
 
