@@ -22,6 +22,11 @@ describe("Login", function () {
     cy.get("#loginForm button").contains("Login").click();
     cy.wait(500);
 
+    cy.window().its("localStorage.token").should("exist");
+
+    cy.window().its("localStorage.profile").should("exist");
+
     cy.get('a[data-visible="loggedIn"]').should("exist");
   });
 });
+
