@@ -22,6 +22,10 @@ describe("logout", function () {
     cy.get("#loginForm button").contains("Login").click();
     cy.wait(500);
 
+    cy.window().its("localStorage.token").should("exist");
+
+    cy.window().its("localStorage.profile").should("exist");
+
     cy.get('a[data-visible="loggedIn"]').should("exist");
     cy.wait(500);
     cy.get("button.btn.btn-outline-warning.me-2").should("be.visible").click();
